@@ -53,3 +53,10 @@ button.btn.btn-sm {
   color: white;
   margin: 10%;
 }
+.filter.text-right {
+  width: 15%;
+  float: right;
+}
+.filter_products{
+  width:50%;
+}

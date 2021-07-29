@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import data from './data.json';
-
+import Defaults from './default';
+import Instock from './instock';
+import Outstock from './outstock';
+import Fruits from './fruits';
+import Vegetables from './vegtables';
 function App() {
-
+  const [active, setActive] = useState("default_card");
   return (
     <div className="App">
       <header className="App-header">
         <h3>Top Super Market</h3>
       </header>
-      <div class="container">
-        <div class="row main">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 Product">
-            {data.map((product, index) => {
-              return <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 card">
-                <img src={product.image} width="100" class="card-img-top" />
-                <h5 class="card-title">{product.name}</h5>
-                <span>Price:<span>${product.price}</span> </span>
-               <span><span class="quantity">Quantity:  <input  type="number" min="1" max="5"/></span><button class="btn btn-sm">Buy Now</button></span>  
-                 
-              </div>
-            })}
-          </div>
-        </div>
-
+      <div class="filter text-right">
+        <h5>Fliter Your Products</h5>
+        <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("default_card")}>Filter</button>
+        <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("one")}>In Stock</button>
+        <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("two")}>Out of Stock</button>
+        <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("three")}>Fruits</button>
+        <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("four")}>Vegetables</button>
+      </div>
+      <div>
+        {active === "default_card" && <Defaults />}
+        {active === "one" && <Instock />}
+        {active === "two" && <Outstock />}
+        {active === "three" && <Fruits />}
+        {active === "four" && <Vegetables />}
       </div>
 
     </div>
