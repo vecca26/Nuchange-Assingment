@@ -45,3 +45,11 @@ img.card-img-top {
   margin: 1%;
     width: 30%;
 }
+.quantity{
+  font-size:12px;
+}
+button.btn.btn-sm {
+  background: #6962da;
+  color: white;
+  margin: 10%;
+}
