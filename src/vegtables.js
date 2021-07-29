@@ -5,9 +5,9 @@ const Vegetables  = () => {
     return (
     <div class="container">
     <div class="row main">
-        <h2>Vegtables</h2>
+        <h2>Vegetables</h2>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 Product">
-      {data.filter(products => products.category === "Vegtables").map(filteredproducts => {
+      {data.filter(products => products.category === "vegetables").map(filteredproducts => {
           return <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 card">
             <img src={filteredproducts.image} width="100" class="card-img-top" />
             <h5 class="card-title">{filteredproducts.name}</h5>

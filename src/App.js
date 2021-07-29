@@ -13,7 +13,7 @@ function App() {
         <h3>Top Super Market</h3>
       </header>
       <div class="filter text-right">
-        <h5>Fliter Your Products</h5>
+        <h5>Filter Your Products</h5>
         <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("default_card")}>Filter</button>
         <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("one")}>In Stock</button>
         <button class="btn btn-sm btn-info filter_products" onClick={() => setActive("two")}>Out of Stock</button>

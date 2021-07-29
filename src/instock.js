@@ -5,7 +5,7 @@ const Instock  = () => {
     return (
     <div class="container">
     <div class="row main">
-        <h2>IN Stock</h2>
+        <h2>In Stock</h2>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 Product">
       {data.filter(products => products.available === 1).map(filteredproducts => {
           return <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 card">
